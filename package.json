@@ -1,0 +1,31 @@
+{
+  "name": "jibe-sync",
+  "version": "0.0.7",
+  "description": "Continuously sync git repositories to a remote machine.",
+  "keywords": [
+    "git",
+    "sync",
+    "remote",
+    "tool",
+    "utility"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andygreenegrass/jibe.git"
+  },
+  "main": "jibe.js",
+  "bin": {
+    "jibe": "./jibe.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andy Greene",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.0",
+    "glob": "^5.0.15",
+    "read": "^1.0.6",
+    "ssh2": "^0.4.12"
+  }
+}
