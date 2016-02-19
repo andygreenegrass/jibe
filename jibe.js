@@ -60,10 +60,6 @@ parseParams(process.argv, function(err, params) {
       });
     });
   });
-  conn.connect({
-    host: params.host,
-    port: params.port,
-    username: params.username,
-    privateKey: params.privKey
-  });
+  //console.log(params.ssh);
+  conn.connect(params.ssh);
 });
