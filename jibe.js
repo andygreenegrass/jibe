@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 
-var path = require('path');
-var Client = require('ssh2').Client;
-
-var utils = require('./lib/utils');
-var Project = require('./lib/project');
-var parseParams = require('./lib/params');
+const path = require('path');
+const Client = require('ssh2').Client;
+const utils = require('./lib/utils');
+const Project = require('./lib/project');
+const parseParams = require('./lib/params');
 
 //------------------------------------------------------------------------------
 
@@ -48,7 +47,7 @@ parseParams(process.argv, function(err, params) {
     conn.sftp(function(err, sftp) {
       if (err) {throw err;}
       console.log('Connected.');
-      sftp.stat(dstParentDir, function(err, stat) {
+      sftp.stat(dstParentDir, function(err /*, stat*/) {
         if (err) {console.log(err); process.exit(1);}
         sftp.mkdir(params.dstPath, {}, function(err) {
           if (err && err.code !== 4) {
